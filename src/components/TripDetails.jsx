@@ -23,7 +23,15 @@ const TripDetails = () => {
 
     return (
         <>
+
             <div className='container-sm'>
+                <input
+                    type="text"
+                    placeholder="Cerca partecipante..."
+                    className="form-control"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
                 <Accordion defaultActiveKey="0" className="mt-4">
                     {filteredParticipants.map((participant, index) => (
                         <Card key={participant.id} className='list-group-item'>
