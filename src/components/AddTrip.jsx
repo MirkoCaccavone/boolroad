@@ -88,7 +88,7 @@ const AddTrip = () => {
                     />
                 </div>
 
-                <h3 className="mt-4">Partecipanti</h3>
+                <h3 className="mt-4 text-center">Nuovo Partecipante</h3>
                 {partecipanti.map((partecipante, index) => (
                     <div key={index} className="alert alert-info">
                         {partecipante.nome} {partecipante.cognome}
@@ -150,16 +150,19 @@ const AddTrip = () => {
                     />
                 </div>
 
-                <button
-                    type="button"
-                    className="btn btn-primary mt-3"
-                    onClick={handleAggiungiPartecipante}
-                >
-                    Aggiungi partecipante
-                </button>
-                <button type="submit" className="btn btn-success mt-3 ml-2">
-                    Aggiungi viaggio
-                </button>
+                <div className='d-flex gap-3'>
+                    <button
+                        type="button"
+                        className="btn btn-primary my-3 "
+                        onClick={handleAggiungiPartecipante}
+                    >
+                        Aggiungi partecipante
+                    </button>
+                    <button type="submit" className="btn btn-success my-3 ml-3">
+                        Aggiungi viaggio
+                    </button>
+                </div>
+
             </form>
         </div>
     );

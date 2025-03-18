@@ -19,6 +19,8 @@ const TravelerDetails = () => {
                 <p className="list-group-item">Email: {traveler.email}</p>
                 <p className="list-group-item">Telefono: {traveler.telefono}</p>
                 <p className="list-group-item">Codice fiscale: {traveler.codiceFiscale}</p>
+                <p className="list-group-item">Numero d'emergenza: {traveler.numeroEmergenza}</p>
+
             </div>
 
             <button className='back-to' onClick={() => navigate(-1)}>

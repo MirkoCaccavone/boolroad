@@ -24,7 +24,7 @@ const TripList = () => {
                                 Ritorno: {trip.dataFine}
                             </strong>
                         </div>
-                        <span className="badge bg-primary rounded-pill">Bool-Roaders</span>
+                        <span className="badge bg-primary rounded-pill p-2">Bool-Roaders</span>
                     </Link>
                 ))}
             </div>

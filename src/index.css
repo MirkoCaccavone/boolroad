@@ -9,6 +9,7 @@ body {
     background-image: url(../public/bkg.png);
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vH;
     color: black;
 }
 
@@ -24,7 +25,7 @@ img {
 
 /* icona aggiungi viaggio e viaggiatore */
 .fa-square-plus {
-    font-size: 4vw;
+    font-size: 50px;
     color: white;
 }
 
@@ -58,5 +59,42 @@ a {
 .back-to {
     border: none;
     border-radius: 8px;
-    background-color: red;
+    background-color: #199fbd;
+    padding: 4px;
+    margin-top: 10px;
+    color: white;
+}
+
+.white {
+    color: #fff;
+}
+
+.form-group {
+    border-radius: 8px;
+    margin-bottom: 0.3vw;
+}
+
+.dettagli {
+    color: #199fbd;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dettagli:hover {
+    color: #086b81;
+}
+
+
+
+@media (max-width:576px) {
+
+    /* logo header */
+    img {
+        min-width: 155px;
+    }
+
+    .back-to {
+        padding: 5px 30px;
+        font-size: 20px;
+    }
 }

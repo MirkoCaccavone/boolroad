@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { trips, Travelers } from '../../data.js';
+import { Accordion, Card, Button } from 'react-bootstrap';
 
 const TripDetails = () => {
     const { id } = useParams();
@@ -22,31 +23,27 @@ const TripDetails = () => {
 
     return (
         <>
-            <div className="container mt-4">
-                <h2 className="text-center">{trip.luogo}</h2>
-
-                <div className="form-group">
-                    <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Cerca partecipante..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                    />
-
-                </div>
-                <ul className="list-group mt-4">
-                    {filteredParticipants.map((participant) => (
-                        <li key={participant.id} className="list-group-item">
-                            <Link to={`/travelers/${participant.id}`}>
-                                {participant.nome} {participant.cognome}
-                            </Link>
-                        </li>
+            <div className='container-sm'>
+                <Accordion defaultActiveKey="0" className="mt-4">
+                    {filteredParticipants.map((participant, index) => (
+                        <Card key={participant.id} className='list-group-item'>
+                            <Accordion.Item className='list-group-item' eventKey={index.toString()}>
+                                <Accordion.Header>
+                                    {participant.nome} {participant.cognome}
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                    <p>Email: {participant.email}</p>
+                                    <p>codice Fiscale {participant.codiceFiscale}</p>
+                                    <p>cellulare {participant.telefono}</p>
+                                    <Link className='dettagli' to={`/travelers/${participant.id}`}>Dettagli</Link>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Card>
                     ))}
-                </ul>
-
-                <button className='back-to' ><Link to="/">Home</Link></button>
+                </Accordion>
+                <button className='back-to' ><Link className='white' to="/">Home</Link></button>
             </div >
+
         </>
     );
 };
