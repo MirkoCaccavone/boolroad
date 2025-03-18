@@ -54,72 +54,112 @@ const AddTrip = () => {
     };
 
     return (
-        <div>
-            <h2>Aggiungi nuovo viaggio</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Luogo"
-                    value={luogo}
-                    onChange={(e) => setLuogo(e.target.value)}
-                />
-                <input
-                    type="date"
-                    placeholder="Data inizio"
-                    value={dataInizio}
-                    onChange={(e) => setDataInizio(e.target.value)}
-                />
-                <input
-                    type="date"
-                    placeholder="Data fine"
-                    value={dataFine}
-                    onChange={(e) => setDataFine(e.target.value)}
-                />
-                <h3>Partecipanti</h3>
+        <div className="container mt-4">
+
+            <h2 className="text-center">Aggiungi nuovo viaggio</h2>
+
+            <form onSubmit={handleSubmit} className="mt-4">
+
+                <div className="form-group">
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Luogo"
+                        value={luogo}
+                        onChange={(e) => setLuogo(e.target.value)}
+                    />
+                </div>
+                <div className="form-group">
+                    <input
+                        type="date"
+                        className="form-control"
+                        placeholder="Data inizio"
+                        value={dataInizio}
+                        onChange={(e) => setDataInizio(e.target.value)}
+                    />
+                </div>
+                <div className="form-group">
+                    <input
+                        type="date"
+                        className="form-control"
+                        placeholder="Data fine"
+                        value={dataFine}
+                        onChange={(e) => setDataFine(e.target.value)}
+                    />
+                </div>
+
+                <h3 className="mt-4">Partecipanti</h3>
                 {partecipanti.map((partecipante, index) => (
-                    <div key={index}>
+                    <div key={index} className="alert alert-info">
                         {partecipante.nome} {partecipante.cognome}
                     </div>
                 ))}
-                <input
-                    type="text"
-                    name="nome"
-                    placeholder="Nome"
-                    value={nuovoPartecipante.nome}
-                    onChange={handlePartecipanteChange}
-                />
-                <input
-                    type="text"
-                    name="cognome"
-                    placeholder="Cognome"
-                    value={nuovoPartecipante.cognome}
-                    onChange={handlePartecipanteChange}
-                />
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={nuovoPartecipante.email}
-                    onChange={handlePartecipanteChange}
-                />
-                <input
-                    type="tel"
-                    name="telefono"
-                    placeholder="Telefono"
-                    value={nuovoPartecipante.telefono}
-                    onChange={handlePartecipanteChange}
-                />
-                <input
-                    type="text"
-                    name="codiceFiscale"
-                    placeholder="Codice fiscale"
-                    value={nuovoPartecipante.codiceFiscale}
-                    onChange={handlePartecipanteChange}
-                />
-                <button type="button" onClick={handleAggiungiPartecipante}>
+
+                <div className="form-group mt-4">
+                    <input
+                        type="text"
+                        name="nome"
+                        className="form-control"
+                        placeholder="Nome"
+                        value={nuovoPartecipante.nome}
+                        onChange={handlePartecipanteChange}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <input
+                        type="text"
+                        name="cognome"
+                        className="form-control"
+                        placeholder="Cognome"
+                        value={nuovoPartecipante.cognome}
+                        onChange={handlePartecipanteChange}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <input
+                        type="email"
+                        name="email"
+                        className="form-control"
+                        placeholder="Email"
+                        value={nuovoPartecipante.email}
+                        onChange={handlePartecipanteChange}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <input
+                        type="tel"
+                        name="telefono"
+                        className="form-control"
+                        placeholder="Telefono"
+                        value={nuovoPartecipante.telefono}
+                        onChange={handlePartecipanteChange}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <input
+                        type="text"
+                        name="codiceFiscale"
+                        className="form-control"
+                        placeholder="Codice fiscale"
+                        value={nuovoPartecipante.codiceFiscale}
+                        onChange={handlePartecipanteChange}
+                    />
+                </div>
+
+                <button
+                    type="button"
+                    className="btn btn-primary mt-3"
+                    onClick={handleAggiungiPartecipante}
+                >
                     Aggiungi partecipante
                 </button>
-                <button type="submit">Aggiungi viaggio</button>
+                <button type="submit" className="btn btn-success mt-3 ml-2">
+                    Aggiungi viaggio
+                </button>
             </form>
         </div>
     );

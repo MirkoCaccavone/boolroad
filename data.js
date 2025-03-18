@@ -467,7 +467,7 @@ export const trips = [
     },
     {
         "id": 2,
-        "luogo": "New York,",
+        "luogo": "New York",
         "dataInizio": "2025-06-01",
         "dataFine": "2025-06-10",
     },
