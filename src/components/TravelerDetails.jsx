@@ -20,6 +20,10 @@ const TravelerDetails = () => {
                 <p className="list-group-item">Telefono: {traveler.telefono}</p>
                 <p className="list-group-item">Codice fiscale: {traveler.codiceFiscale}</p>
                 <p className="list-group-item">Numero d'emergenza: {traveler.numeroEmergenza}</p>
+                <p className="list-group-item">Allergie: {traveler.allergie}</p>
+                <p className="list-group-item">Data di Nascita {traveler.dataNascita}</p>
+
+
 
             </div>
 
