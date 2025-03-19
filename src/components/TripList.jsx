@@ -13,7 +13,7 @@ const TripList = () => {
     );
     return (
         <div className="container mt-4">
-            <h1 className="text-center mb-4">Elenco viaggi:</h1>
+            <h1 className="text-center mb-4">Elenco viaggi</h1>
             <input
                 type="text"
                 placeholder="Cerca viaggio..."

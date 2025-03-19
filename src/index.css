@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Open Sans", sans-serif;
     background-image: url(../public/bkg.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,11 +30,24 @@ img {
 
 /* icona aggiungi viaggio e viaggiatore */
 .fa-square-plus {
-    font-size: 50px;
+    font-size: 45px;
     color: white;
 }
 
 .fa-square-plus:hover {
+    transform: scale(1.2);
+}
+
+/* Stile per le icone della navbar */
+.fa-address-book,
+.fa-user {
+
+    font-size: 45px;
+    color: white;
+}
+
+.fa-address-book:hover,
+.fa-user:hover {
     transform: scale(1.2);
 }
 
